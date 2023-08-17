@@ -4,6 +4,8 @@
 - `npm i leaflet`
 - then import it where you want to use it
 
+[link to the component](https://github.com/thausale/sveltekit-leaflet-integration/blob/main/src/lib/components/Map.svelte)
+
 ## There are a few options you can pass to the component
 
 | Name            | example                                | Description                                                                  |
