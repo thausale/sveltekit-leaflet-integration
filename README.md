@@ -1,38 +1,16 @@
-# create-svelte
+# How to implement the Map.svelte component into your project
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+- be sure to install the leaflet package
+- `npm i leaflet`
+- then import it where you want to use it
 
-## Creating a project
+## There are a few options you can pass to the component
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+| Name            | example                                | Description                                                                  |
+| --------------- | -------------------------------------- | ---------------------------------------------------------------------------- |
+| height          | "200px"                                | The height of the component                                                  |
+| width           | "500px"                                | the width of the component                                                   |
+| initialView     | [50.85695267176521, 4.359590452037109] | The initial position of the map                                              |
+| initialZoom     | 10                                     | The initial zoom of the map                                                  |
+| markers         | [[50.85, 4.35],[50.60,4.40],...]       | Array with marker coordinates                                                |
+| customMarkerUrl | "customMarker.svg"                     | The name of the customMarker file, make sure that it's in your static folder |

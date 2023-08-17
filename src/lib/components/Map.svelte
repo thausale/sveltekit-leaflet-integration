@@ -9,8 +9,11 @@
   export let width = "200px";
   export let initialView = [50.85695267176521, 4.359590452037109];
   export let initialZoom = 10;
-  export let markers = [{ lat: 50.85499742276381, lng: 4.366053727009928 }];
-  export let customMarkerUrl = "marker_svg.svg";
+  export let markers = [
+    [50.85695267176521, 4.359590452037109],
+    [50.6, 4.4],
+  ];
+  export let customMarker = "marker_svg.svg";
 
   let map;
 
@@ -28,21 +31,19 @@
         }
       ).addTo(map);
 
-      if (markers && customMarkerUrl) {
+      if (markers && customMarker) {
         const icon = L.icon({
-          iconUrl: customMarkerUrl,
+          iconUrl: customMarker,
           iconSize: [56, 56],
           iconAnchor: [28, 55], // point of the icon which will correspond to marker's location
         });
 
         markers.forEach((marker) => {
-          console.log(marker.lat);
-          L.marker([marker.lat, marker.lng], { icon }).addTo(map);
+          L.marker([marker[0], marker[1]], { icon }).addTo(map);
         });
       } else if (markers) {
         markers.forEach((marker) => {
-          console.log(marker.lat);
-          L.marker([marker.lat, marker.lng], { icon }).addTo(map);
+          L.marker([marker[0], marker[1]]).addTo(map);
         });
       }
     }
