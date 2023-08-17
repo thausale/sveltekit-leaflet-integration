@@ -13,7 +13,7 @@
     [50.85695267176521, 4.359590452037109],
     [50.6, 4.4],
   ];
-  export let customMarker = "marker_svg.svg";
+  export let customMarker = "";
 
   let map;
 
@@ -34,8 +34,8 @@
       if (markers && customMarker) {
         const icon = L.icon({
           iconUrl: customMarker,
-          iconSize: [56, 56],
-          iconAnchor: [28, 55], // point of the icon which will correspond to marker's location
+          iconSize: [36, 36],
+          iconAnchor: [18, 36], // point of the icon which will correspond to marker's location
         });
 
         markers.forEach((marker) => {
